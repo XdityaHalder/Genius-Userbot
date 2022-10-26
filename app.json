@@ -1,0 +1,46 @@
+{
+    "name": "Genius-Userbot",
+    "logo": "https://te.legra.ph/file/ceee32999a8250a1f7ebb.png",
+    "description": "An Advanced Premium Music & user Bot For Telegram ID.",
+    "keywords": ["music", "voice chat", "userbot"],
+    "repository": "https://github.com/GeniusBoi/Genius-Userbot",
+    "stack": "container",
+    "env": {
+        "API_ID": {
+            "description": "Your App ID",
+            "required": true
+        },
+        "API_HASH": {
+            "description": "Your App Hash",
+            "required": true
+        },
+        "STRING_SESSION": {
+            "description": "Pyrogram String Session",
+            "required": true
+        },
+        "BOT_TOKEN": {
+            "description": "Your Bot Token",
+            "required": true
+        },
+        "MONGO_DB_URL": {
+            "description": "Your Mongo DB URL",
+            "required": true
+        },
+        "OWNER_ID": {
+            "description": "Your User Id",
+            "required": true
+        },
+        "LOG_GROUP_ID": {
+            "description": "Your Log Group ID",
+            "required": true
+        }
+    },
+    "buildpacks": [
+    {
+      "url": "heroku/python"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+    }
+  ]
+}
