@@ -10,13 +10,13 @@ from rich.console import Console
 from rich.table import Table
 from youtubesearchpython import VideosSearch
 
-from AdityaHalder.config import LOG_GROUP_ID, STRING_SESSION
-from AdityaHalder import client, robot, pytgcalls, ASSID, ASSNAME, BOT_ID, BOT_NAME, OWNER_ID
-from AdityaHalder.modules.helpers.filters import command
-from AdityaHalder.modules.helpers.decorators import errors, sudo_users_only
-from AdityaHalder.plugins import ALL_MODULES
-from AdityaHalder.utilities.inline import paginate_modules
-from AdityaHalder.utilities.misc import SUDOERS
+from Royalboycoder.config import LOG_GROUP_ID, STRING_SESSION
+from Royalboycoder import client, robot, pytgcalls, ASSID, ASSNAME, BOT_ID, BOT_NAME, OWNER_ID
+from Royalboycoder.modules.helpers.filters import command
+from Royalboycoder.modules.helpers.decorators import errors, sudo_users_only
+from Royalboycoder.plugins import ALL_MODULES
+from Royalboycoder.utilities.inline import paginate_modules
+from Royalboycoder.utilities.misc import SUDOERS
 
 loop = asyncio.get_event_loop()
 console = Console()
@@ -60,16 +60,16 @@ async def initiate_bot():
             status="[bold blue]Importation Completed!",
         )
     console.print(
-        "[bold green] 🥀 Genius Userbot Started ✨\n"
+        "[bold green] 🥀 𝐑𝐨𝐲𝐚𝐥 𝐔𝐬𝐞𝐫𝐛𝐨𝐭 𝐒𝐭𝐚𝐫𝐭𝐞𝐝 ✨\n"
     )
     try:
         await robot.send_message(
             LOG_GROUP_ID,
-            "<b> 🥀 Genius UserBot is Here ✨</b>",
+            "<b> 🥀 𝐑𝐨𝐲𝐚𝐥 𝐔𝐬𝐞𝐫𝐁𝐨𝐭 𝐢𝐬 𝐇𝐞𝐫𝐞 ✨</b>",
         )
     except Exception as e:
         print(
-            "\nBot. Has Failed To Access The Log Group, Be Sure You Have Added Your Bot To Your Log Channel And Promoted As Admin❗"
+            "\n𝐁𝐨𝐭. 𝐇𝐚𝐬 𝐅𝐚𝐢𝐥𝐞𝐝 𝐓𝐨 𝐀𝐜𝐜𝐞𝐬𝐬 𝐓𝐡𝐞 𝐋𝐨𝐠 𝐆𝐫𝐨𝐮𝐩, 𝐁𝐞 𝐒𝐮𝐫𝐞 𝐘𝐨𝐮 𝐇𝐚𝐯𝐞 𝐀𝐝𝐝𝐞𝐝 𝐘𝐨𝐮𝐫 𝐁𝐨𝐭 𝐓𝐨 𝐘𝐨𝐮𝐫 𝐋𝐨𝐠 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐀𝐧𝐝 𝐏𝐫𝐨𝐦𝐨𝐭𝐞𝐝 𝐀𝐬 𝐀𝐝𝐦𝐢𝐧❗"
         )
         console.print(f"\n[red] Stopping Bot")
         return
@@ -84,53 +84,53 @@ async def initiate_bot():
         try:
             await client.send_message(
                 LOG_GROUP_ID,
-                "<b>🥀 Genius UserBot is Active ✨</b>",
+                "<b>🥀 𝐑𝐨𝐲𝐚𝐥 𝐔𝐬𝐞𝐫𝐁𝐨𝐭 𝐢𝐬 𝐀𝐜𝐭𝐢𝐯𝐞 ✨</b>",
             )
         except Exception as e:
             print(
-                "\nUserBot Account Has Failed To Access The Log Group.❗"
+                "\n𝐔𝐬𝐞𝐫𝐁𝐨𝐭 𝐀𝐜𝐜𝐨𝐮𝐧𝐭 𝐇𝐚𝐬 𝐅𝐚𝐢𝐥𝐞𝐝 𝐓𝐨 𝐀𝐜𝐜𝐞𝐬𝐬 𝐓𝐡𝐞 𝐋𝐨𝐠 𝐆𝐫𝐨𝐮𝐩.❗"
             )
             console.print(f"\n[red] Stopping Bot")
             return
         try:
-            await client.join_chat("AdityaServer")
-            await client.join_chat("AdityaDiscus")
+            await client.join_chat("RoyalServer")
+            await client.join_chat("RoyalChatGroup")
         except:
             pass
         console.print(f"├[red] UserBot Started as {ASSNAME}")
         console.print(f"├[green] ID :- {ASSID}")
-        console.print(f"└[red] ✅ Genius UserBot Boot Complete 💯 ...")
+        console.print(f"└[red] ✅ Royal UserBot Boot Complete 💯 ...")
         await idle()
         console.print(f"\n[red] Userbot Stopped")
 
 
 home_text_pm = f"""**ʜᴇʟʟᴏ ,
 ᴍʏ ɴᴀᴍᴇ ɪs {BOT_NAME}.
-I Aᴍ Gᴇɴɪᴜs, Aɴ Aᴅᴠᴀɴᴄᴇᴅ UsᴇʀBᴏᴛ Wɪᴛʜ Sᴏᴍᴇ Usᴇғᴜʟ Fᴇᴀᴛᴜʀᴇs.**"""
+I Aᴍ ʀᴏʏᴀʟ, Aɴ Aᴅᴠᴀɴᴄᴇᴅ UsᴇʀBᴏᴛ Wɪᴛʜ Sᴏᴍᴇ Usᴇғᴜʟ Fᴇᴀᴛᴜʀᴇs.**"""
 
 
 @robot.on_message(command(["start"]) & filters.private)
 async def start(_, message):
     await message.reply_photo(
-        photo=f"https://telegra.ph/file/027283ee9defebc3298b8.png",
+        photo=f"",
         caption=f"""**━━━━━━━━━━━━━━━━━━━━━━━━
-💥 Hᴇʟʟᴏ, I Aᴍ Gᴇɴɪᴜs » Aɴ Aᴅᴠᴀɴᴄᴇᴅ
+💥 Hᴇʟʟᴏ, I Aᴍ ʀᴏʏᴀʟ ᴜsᴇʀʙᴏᴛ » Aɴ Aᴅᴠᴀɴᴄᴇᴅ
 Pʀᴇᴍɪᴜᴍ Tᴇʟᴇɢʀᴀᴍ Usᴇʀ Bᴏᴛ.
 
 ┏━━━━━━━━━━━━━━━━━━━┓
-┣★ Oᴡɴᴇʀ'xD› : [Aᴅɪᴛʏᴀ Hᴀʟᴅᴇʀ](https://t.me/adityahalder)
-┣★ Uᴘᴅᴀᴛᴇs ›› : [Aᴅɪᴛʏᴀ Sᴇʀᴠᴇʀ](https://t.me/adityaserver)
-┣★ Sᴜᴘᴘᴏʀᴛ » : [Aᴅɪᴛʏᴀ Dɪsᴄᴜs](https://t.me/adityadiscus)
+┣★ Oᴡɴᴇʀ'xD ›> : [ʀᴏʏᴀʟ ʙᴏʏ ᴀᴍɪᴛ](https://t.me/royal_boy_amit)
+┣★ Uᴘᴅᴀᴛᴇs ›› : [ʀᴏʏᴀʟ Sᴇʀᴠᴇʀ](https://t.me/royalkifeelings)
+┣★ Sᴜᴘᴘᴏʀᴛ >> : [ʀᴏʏᴀʟ ᴄʜᴀᴛ ɢʀᴏᴜᴘ](https://t.me/royalkifeelings12)
 ┗━━━━━━━━━━━━━━━━━━━┛
 
 💞 Cʟɪᴄᴋ Oɴ Dᴇᴘʟᴏʏ Bᴜᴛᴛᴏɴ Tᴏ Mᴀᴋᴇ
-Yᴏᴜʀ Oᴡɴ » Gᴇɴɪᴜs Usᴇʀ Bᴏᴛ.
+Yᴏᴜʀ Oᴡɴ » ʀᴏʏᴀʟ Usᴇʀ Bᴏᴛ.
 ━━━━━━━━━━━━━━━━━━━━━━━━**""",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "💥 Dᴇᴘʟᴏʏ Gᴇɴɪᴜs UsᴇʀBᴏᴛ ✨", url=f"https://github.com/GeniusBoi/Genius-UserBot")
+                        "💥 Dᴇᴘʟᴏʏ ʀᴏʏᴀʟ UsᴇʀBᴏᴛ ✨", url=f"https://github.com/royalboycoder/Royal-Userbot-Repo")
                 ]
                 
            ]
@@ -152,10 +152,10 @@ async def help_parser(name, keyboard=None):
         keyboard = InlineKeyboardMarkup(paginate_modules(0, HELPABLE, "help"))
     return (
         """**🥀 Wᴇʟᴄᴏᴍᴇ Tᴏ Hᴇʟᴘ Mᴇɴᴜ Oғ :
-Gᴇɴɪᴜs UsᴇʀBᴏᴛ Vᴇʀ : `2.0` 🔥...
+ʀᴏʏᴀʟ UsᴇʀBᴏᴛ 🔥...
 
 💞 Jᴜsᴛ Cʟɪᴄᴋ Oɴ Bᴇʟᴏᴡ Iɴʟɪɴᴇ
-Tᴏ Gᴇᴛ Gᴇɴɪᴜs Cᴏᴍᴍᴀɴᴅs ✨...**
+Tᴏ Gᴇᴛ ʀᴏʏᴀʟ ᴜsᴇʀʙᴏᴛ  Cᴏᴍᴍᴀɴᴅs ✨...**
 """.format(
             first_name=name
         ),
@@ -181,10 +181,10 @@ async def help_button(client, query):
     back_match = re.match(r"help_back", query.data)
     create_match = re.match(r"help_create", query.data)
     top_text = f"""**🥀 Wᴇʟᴄᴏᴍᴇ Tᴏ Hᴇʟᴘ Mᴇɴᴜ Oғ :
-Gᴇɴɪᴜs UsᴇʀBᴏᴛ Vᴇʀ : `2.0` 🔥...
+ʀᴏʏᴀʟ ᴜsᴇʀʙᴏᴛ 🔥...
 
 💞 Jᴜsᴛ Cʟɪᴄᴋ Oɴ Bᴇʟᴏᴡ Iɴʟɪɴᴇ
-Tᴏ Gᴇᴛ Gᴇɴɪᴜs Cᴏᴍᴍᴀɴᴅs ✨...**
+Tᴏ Gᴇᴛ ʀᴏʏᴀʟ ᴜsᴇʀʙᴏᴛ Cᴏᴍᴍᴀɴᴅs ✨...**
  """
     if mod_match:
         module = mod_match.group(1)
@@ -198,10 +198,10 @@ Tᴏ Gᴇᴛ Gᴇɴɪᴜs Cᴏᴍᴍᴀɴᴅs ✨...**
             [
                 [
                     InlineKeyboardButton(
-                        text="↪️ ʙᴀᴄᴋ", callback_data="help_back"
+                        text="↪️ 𝐁𝐚𝐜𝐤", callback_data="help_back"
                     ),
                     InlineKeyboardButton(
-                        text="🔄 ᴄʟᴏsᴇ", callback_data="close"
+                        text="🔄 𝐂𝐥𝐨𝐬𝐞", callback_data="close"
                     ),
                 ],
             ]
